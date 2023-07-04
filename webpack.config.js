@@ -12,7 +12,7 @@ module.exports = {
   },
   devServer: {
     historyApiFallback: true,
-    liveReload: false,
+    liveReload: true,
     hot: false,
   },
   module: {
@@ -20,6 +20,10 @@ module.exports = {
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.scss$/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
         test: /\.(png|jpe?g|svg|gif)$/,

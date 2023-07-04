@@ -1,0 +1,17 @@
+header{
+    background-color: #f6f6f6;
+
+    a{
+        text-decoration: none;
+        color: #691103;
+        padding: 18px;
+    }
+
+    nav{
+        width: 50%;
+        margin: auto;
+
+        display: flex;
+        justify-content: space-around;
+    }
+}
