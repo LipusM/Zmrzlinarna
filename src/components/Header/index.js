@@ -8,12 +8,19 @@ export const Header = () => {
 
     element.innerHTML = `
     <nav>
-        <a href="/html/">Úvod</a>
-        <a href="/css/">E-shop</a>
-        <a href="/js/">Práce</a>
-        <a href="/python/">Kontakty</a>
+        <a href="/">Úvod</a>
+        <a href="/eshop">E-shop</a>
+        <a href="/prace">Práce</a>
+        <a href="/kontakty">Kontakty</a>
     </nav>
     `
+
+    const links = element.querySelector("nav")
+
+    links.addEventListener("click", (event) => {
+        c(event.target)
+        c("ahoj")
+    })
 
     return element
 }
