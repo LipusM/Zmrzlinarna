@@ -7,6 +7,10 @@ header{
         padding: 18px;
     }
 
+    #nav-btn{
+        display: none;
+    }
+
     nav{
         width: 50%;
         margin: auto;
@@ -15,7 +19,8 @@ header{
         justify-content: space-around;
     }
 
-    .active{
+    .active-link{
         background-color: #691103;
+        color: #f6f6f6;
     }
 }
