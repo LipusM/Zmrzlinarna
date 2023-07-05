@@ -9,6 +9,13 @@ header{
 
     #nav-btn{
         display: none;
+    
+        .navPart{
+            height: 10px;
+            width: 65px;
+            border: solid 2px #691103;
+        
+        }
     }
 
     nav{
@@ -24,3 +31,45 @@ header{
         color: #f6f6f6;
     }
 }
+
+
+@media (max-width: 900px){
+
+    header{
+ 
+        .nav-closed{
+            display: none;
+        }
+
+        section:nth-of-type(1){
+            padding: 5px;
+            background-color: #f6f6f6;
+
+            #nav-btn{
+                display: block;
+
+                .navPart{
+                    margin: 5px 0px;
+                }
+            }
+        }
+
+        section:nth-of-type(2){
+            background-color: white;
+
+            nav{
+                background-color: #f6f6f6;
+    
+                flex-direction: column;
+                margin-left: 0px;
+                width: max-content;
+    
+                a{
+                    margin: auto;
+                    width: 100%;
+                }
+            }
+        }
+    }
+     
+ }

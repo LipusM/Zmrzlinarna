@@ -1,7 +1,6 @@
 const c = console.log.bind(document)
 
 import './style.scss'
-import './styleMobile.scss'
 import menu from './img/menu.png'
 
 export const Header = () => {
@@ -9,15 +8,22 @@ export const Header = () => {
     const element = document.createElement("header")
 
     element.innerHTML = `
-    <div id="nav-btn">
-        <img src="${menu}" alt="menuPanel"> 
-    </div>
-    <nav id="nav-panel">
-        <a href="/" id="intro">Úvod</a>
-        <a href="/e-shop" id="eshop">E-shop</a>
-        <a href="/prace" id="job">Práce</a>
-        <a href="/kontakty" id="contact">Kontakty</a>
-    </nav>
+    <section>
+        <div id="nav-btn">
+            <div class="navPart"></div>
+            <div class="navPart"></div>
+            <div class="navPart"></div>
+        </div>
+    </section>
+
+    <section>
+        <nav id="nav-panel" class="nav-closed">
+            <a href="/" id="intro">Úvod</a>
+            <a href="/e-shop" id="eshop">E-shop</a>
+            <a href="/prace" id="job">Práce</a>
+            <a href="/kontakty" id="contact">Kontakty</a>
+        </nav>
+    </section>
     `
 
     const page = location.pathname
@@ -35,7 +41,11 @@ export const Header = () => {
         element.querySelector("#contact").classList.add("active-link")
     }
 
-    const navBtn = document.querySelector("#nav-btn")
+    const navPanel = element.querySelector("#nav-panel")
+    const navBtn = element.querySelector("#nav-btn")
+    navBtn.addEventListener("click", () => {
+        navPanel.classList.toggle("nav-closed")
+    })
 
     return element
 }
