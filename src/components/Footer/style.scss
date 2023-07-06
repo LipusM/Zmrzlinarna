@@ -1,0 +1,22 @@
+footer{
+    background-color: #f6f6f6;
+    color: #691103;
+
+    height: 60px;
+
+    position: absolute;
+    bottom: 0px;
+
+    width: -moz-available;
+
+    div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background-color: #f6f6f6;
+
+        width: 100%;
+        height: 60px;
+    }
+}

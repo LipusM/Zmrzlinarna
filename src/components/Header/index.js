@@ -2,6 +2,7 @@ const c = console.log.bind(document)
 
 import './style.scss'
 import menu from './img/menu.png'
+import logo from './img/logo.svg'
 
 export const Header = () => {
 
@@ -9,10 +10,16 @@ export const Header = () => {
 
     element.innerHTML = `
     <section>
-        <div id="nav-btn">
+        <div id="nav-btn" class="firstSection">
             <div class="navPart"></div>
             <div class="navPart"></div>
             <div class="navPart"></div>
+        </div>
+
+        <div class="firstSection">
+            <div>
+                <img src="${logo}" alt="logo"> 
+            </div>
         </div>
     </section>
 
@@ -41,10 +48,13 @@ export const Header = () => {
         element.querySelector("#contact").classList.add("active-link")
     }
 
-    const navPanel = element.querySelector("#nav-panel")
     const navBtn = element.querySelector("#nav-btn")
+    const navPanel = element.querySelector("#nav-panel")
     navBtn.addEventListener("click", () => {
         navPanel.classList.toggle("nav-closed")
+
+
+        navBtn.classList.toggle("menuBtn")
     })
 
     return element
