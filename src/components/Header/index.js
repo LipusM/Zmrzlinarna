@@ -9,14 +9,14 @@ export const Header = () => {
     const element = document.createElement("header")
 
     element.innerHTML = `
-    <section>
+    <section id="mobileHeader">
         <div id="nav-btn" class="firstSection">
             <div class="navPart"></div>
             <div class="navPart"></div>
             <div class="navPart"></div>
         </div>
 
-        <div class="firstSection">
+        <div id="myLogo" class="firstSection">
             <div>
                 <img src="${logo}" alt="logo"> 
             </div>
@@ -48,6 +48,8 @@ export const Header = () => {
         element.querySelector("#contact").classList.add("active-link")
     }
 
+
+    //Funkce pro otevírání a zavírání navigačního panelu
     const navBtn = element.querySelector("#nav-btn")
     const navPanel = element.querySelector("#nav-panel")
     navBtn.addEventListener("click", () => {
@@ -55,6 +57,13 @@ export const Header = () => {
 
 
         navBtn.classList.toggle("menuBtn")
+    })
+
+
+    //Funkce pro scrollování nahoru na obrazovku
+    const myLogo = element.querySelector("#myLogo")
+    myLogo.addEventListener("click", () => {
+        window.scrollTo(0, 0)
     })
 
     return element
