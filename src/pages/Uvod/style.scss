@@ -1,6 +1,9 @@
-main{
+main {
 
-    #introBanner{
+    $primaryColor: #691103;
+    $secondaryColor: #4a4a4a;
+
+    #introBanner {
         height: 600px;
 
         background-image: url("./img//uvodBanner.jpg");
@@ -8,75 +11,115 @@ main{
         background-position: center center;
         background-repeat: no-repeat;
 
-        /* width: 100%; */
         position: relative;
 
-        #allIntroBanner{
+        #allIntroBanner {
             width: max-content;
 
             position: absolute;
             top: 20%;
             left: 20%;
 
-            #introBannerText{
-                color: #4a4a4a;
+            #introBannerText {
+                color: $secondaryColor;
                 font-family: museo;
-    
-                h1{
-                    &:nth-of-type(2){
+
+                h1 {
+                    &:nth-of-type(2) {
                         font-weight: 600;
                     }
                 }
             }
-    
-            #introBannerButton{
-                button{
+
+            #introBannerButton {
+                button {
                     background-color: transparent;
-                    color: #691103;
-                    border: #691103 solid 1px;
+                    color: $primaryColor;
+                    border: $primaryColor solid 1px;
+
+                    box-shadow: none;
+
                     transition: ease-in-out 500ms;
-    
-                    &:hover{
+
+                    &:hover {
                         color: white;
-                        background-color: #691103;
+                        background-color: $primaryColor;
                     }
                 }
             }
         }
-    } 
+    }
 
 
 
-    #introSecond{
-        border: solid 1px red;
+    #introSecond {
+        /* border: solid 1px red; */
 
         width: 65%;
         margin: auto;
 
         display: flex;
+        height: 500px;
 
-        div{
-            border: solid 1px green;
-            width: 50%;
+        margin-bottom: 10px;
+
+        div {
+            /* border: solid 1px green; */
             flex: 1;
+            height: 500px;
 
-            &:nth-of-type(1){
+            &:nth-of-type(1) {
 
-                img{
+                img {
                     width: 100%;
+                    height: 100%;
+                    object-fit: contain;
                 }
             }
 
-            &:nth-of-type(2){
+            &:nth-of-type(2) {
                 display: flex;
                 flex-direction: column;
-                
+
                 text-align: justify;
+                padding: 20px;
 
                 font-family: 'museo-sans', sans-serif;
-                color: #4a4a4a;
+                color: $secondaryColor;
+
+                a {
+                    width: max-content;
+
+                    button {
+                        background-color: transparent;
+                        color: $primaryColor;
+                        border: $primaryColor solid 1px;
+                        transition: ease-in-out 500ms;
+
+                        box-shadow: none;
+
+                        &:hover{
+                            color: white;
+                            background-color: $primaryColor;
+                        }
+                    }
+                }
             }
         }
     }
 
+}
+
+@media (max-width: 900px){
+
+    main{
+
+        #introBanner{
+            background-position: right;
+        }
+
+        #introSecond{
+            flex-direction: column;
+        }
+    }
 }
