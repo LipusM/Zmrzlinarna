@@ -8,6 +8,10 @@ header{
         text-decoration: none;
         color: #691103;
         padding: 18px;
+
+        &:hover{
+            color: black;
+        }
     }
 
     #nav-btn{
