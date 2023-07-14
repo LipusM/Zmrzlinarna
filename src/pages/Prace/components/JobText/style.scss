@@ -1,0 +1,14 @@
+#jobIntro{
+    width: 50%;
+    margin: auto;
+
+    text-align: center;
+    font-family: 'museo-sans', sans-serif;
+}
+
+@media (max-width: 900px){
+
+    #jobIntro{
+        width: 75%;
+    }
+}
