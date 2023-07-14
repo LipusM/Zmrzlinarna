@@ -1,4 +1,4 @@
-main {
+/* main {
 
     $primaryColor: #691103;
     $secondaryColor: #4a4a4a;
@@ -53,8 +53,6 @@ main {
 
 
     #introSecond {
-        /* border: solid 1px red; */
-
         width: 65%;
         margin: auto;
 
@@ -64,7 +62,6 @@ main {
         margin-bottom: 10px;
 
         div {
-            /* border: solid 1px green; */
             flex: 1;
             height: 500px;
 
@@ -98,7 +95,7 @@ main {
 
                         box-shadow: none;
 
-                        &:hover{
+                        &:hover {
                             color: white;
                             background-color: $primaryColor;
                         }
@@ -110,16 +107,16 @@ main {
 
 }
 
-@media (max-width: 900px){
+@media (max-width: 900px) {
 
-    main{
+    main {
 
-        #introBanner{
+        #introBanner {
             background-position: right;
         }
 
-        #introSecond{
+        #introSecond {
             flex-direction: column;
         }
     }
-}
+} */

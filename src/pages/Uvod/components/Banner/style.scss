@@ -1,0 +1,56 @@
+$primaryColor: #691103;
+$secondaryColor: #4a4a4a;
+
+#introBanner {
+    height: 600px;
+
+    background-image: url("./img/uvodBanner.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    position: relative;
+
+    #allIntroBanner {
+        width: max-content;
+
+        position: absolute;
+        top: 20%;
+        left: 20%;
+
+        #introBannerText {
+            color: $secondaryColor;
+            font-family: museo;
+
+            h1 {
+                &:nth-of-type(2) {
+                    font-weight: 600;
+                }
+            }
+        }
+
+        #introBannerButton {
+            button {
+                background-color: transparent;
+                color: $primaryColor;
+                border: $primaryColor solid 1px;
+
+                box-shadow: none;
+
+                transition: ease-in-out 500ms;
+
+                &:hover {
+                    color: white;
+                    background-color: $primaryColor;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 900px){
+        #introBanner{
+            background-position: right;
+        }
+}
