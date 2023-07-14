@@ -1,0 +1,38 @@
+
+$primaryColor: #691103;
+
+#workBanner{
+    height: 600px;
+
+    background-image: url("./img/banner.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+
+    a{
+        position: absolute;
+        bottom: 5%;
+        
+            img{
+
+                padding: 5px;
+                border-radius: 50%;
+
+                width: 50px;
+
+                background: rgb(255,255,255, 0.6);
+            }
+    }
+}
+
+
+@media (max-width: 900px){
+    #workBanner{
+        background-position: center;
+    }
+}
