@@ -3,3 +3,9 @@ form{
     width: 50%;
     margin: auto;
 }
+
+@media (max-width: 900px){
+    form{
+        width: 75%;
+    }
+}
