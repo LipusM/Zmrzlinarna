@@ -8,7 +8,7 @@ export const Banner = () => {
     element.setAttribute("id", "workBanner")
 
     element.innerHTML = `
-    <a href="#jobIntro">
+    <a href="#jobForm">
         <img src="${arrowDown}" alt="arrow down"> 
     </a> 
     `

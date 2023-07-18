@@ -1,11 +1,76 @@
+$primaryColor: #691103;
+$secondaryColor: #4a4a4a;
+
 form{
-    border: solid 1px red;
     width: 50%;
     margin: auto;
+    margin-bottom: 20px;
+    
+    font-family: 'museo-sans', sans-serif;
+    color: $secondaryColor;
+
+    input, textarea, select{
+        box-shadow: none !important;
+        border: solid 1px !important;
+        padding: 1rem !important;
+
+        &::placeholder{
+            color: $secondaryColor !important;
+            font-family: 'museo-sans', sans-serif;
+        }
+    }
+
+    .inputFile{
+        display: flex;
+        flex-direction: column;
+
+        input{
+            border-radius: .25rem;
+        }
+    }
+
+    #infoAndButton{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        a{
+            color: $primaryColor;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        button{
+            background-color: transparent;
+            border: solid 1px $primaryColor;
+            color: $primaryColor;
+            font-weight: 500;
+
+            padding: 0.75rem 1.5rem;
+
+            width: 168px;
+
+            transition: ease-in-out 300ms;
+
+            &:focus{
+                box-shadow: none;
+            }
+
+            &:hover{
+                color: white;
+                background-color: $primaryColor;
+            }
+        }
+    }
+
 }
 
 @media (max-width: 900px){
     form{
         width: 75%;
+
+        #infoAndButton{
+            flex-direction: column;
+        }
     }
 }
