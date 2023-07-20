@@ -8,6 +8,7 @@ import { Eshop } from './pages/Eshop/index.js'
 import { Prace } from './pages/Prace/index.js'
 import { Kontakty } from './pages/Kontakty/index.js'
 import { Footer } from './components/Footer/index.js'
+import { PersonalInfo } from './pages/PersonalInfo';
 
 const pageElement = document.querySelector("#app")
 const page = location.pathname
@@ -24,6 +25,9 @@ else if(page === "/prace"){
 }
 else if(page === "/konatky"){
     pageElement.append(Kontakty())
+}
+else if(page === "/ochrana-osobnich-udaju"){
+    pageElement.append(PersonalInfo())
 }
 pageElement.append(Footer())
 

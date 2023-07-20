@@ -69,7 +69,7 @@ export const Form = () => {
 
         <div id="infoAndButton">
             <div>
-                <a href="/ochrana-osobnich-udaju">Informace</a> o ochraně osobních údajů  
+                <a href="/ochrana-osobnich-udaju" target="_blank">Informace</a> o ochraně osobních údajů  
             </div>
 
             <div>
@@ -88,7 +88,7 @@ export const Form = () => {
         console.log("Ahoj světe!")
     }
 
-    formInfo.addEventListener("click", sendForm)
+    formInfo.addEventListener("submit", sendForm)
 
     return element
 }
