@@ -1,10 +1,11 @@
+const c = console.log.bind(document)
+
 
 import "./style.scss"
 
 export const Form = () => {
 
     const element = document.createElement("form")
-    /* element.setAttribute("id", "jobForm") */
 
     element.innerHTML = `
     <div class="row" id="jobForm">
@@ -80,15 +81,62 @@ export const Form = () => {
     </div>
     `
 
-    const formInfo = element.querySelector("#jobForm")
+
+    //FUNKCE PRO ZPRACOVÁNÍ FORMULÁŘE
+    const yourName = element.querySelector("#nameSurname")
+    const yourJob = element.querySelector("#jobPosition")
+    const yourEmailAddress = element.querySelector("#yourEmail")
 
     const sendForm = (e) => {
         e.preventDefault()
 
-        console.log("Ahoj světe!")
+        nameCheck(yourName.value)
+
+        jobCheck(yourJob.value)
+
+        emailCheck()
     }
 
-    formInfo.addEventListener("submit", sendForm)
+    //Kontrola jména
+    const nameCheck = (name) => {
+        if (name === "") {
+            yourName.classList.add("wrongInput")
+        } else {
+            yourName.classList.remove("wrongInput")
+        }
+    }
+
+    //Kontrola výběru pracovní pozice
+    const jobCheck = (job) => {
+        if (job === "") {
+            yourJob.classList.add("wrongInput")
+        } else {
+            yourJob.classList.remove("wrongInput")
+        }
+    }
+
+    //Kontrola e-mailu
+    const domain = ["@gmail.com", "@yahoo.com", "@seznam.cz", "@email.cz", "@volny.cz", "@protonmail.com"]
+    const emailInfo = {
+        domains: [".com", ".cz", ".co.uk", ".de", ".sk"],
+        sign: "@"
+    }
+
+    const emailCheck = () => {
+
+        emailInfo.domains.filter(domain => 
+
+            {
+                if(emailInfo.domains.includes(domain)){
+                    c("smrdíš!")
+                }
+            }
+
+        )
+    }
+
+
+    element.addEventListener("submit", sendForm)
 
     return element
 }
