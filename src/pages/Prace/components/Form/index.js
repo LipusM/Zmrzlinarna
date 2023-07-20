@@ -94,7 +94,7 @@ export const Form = () => {
 
         jobCheck(yourJob.value)
 
-        emailCheck()
+        emailCheck(yourEmailAddress.value)
     }
 
     //Kontrola jména
@@ -122,17 +122,19 @@ export const Form = () => {
         sign: "@"
     }
 
-    const emailCheck = () => {
+    const emailCheck = (email) => {
 
         emailInfo.domains.filter(domain => 
 
             {
-                if(emailInfo.domains.includes(domain)){
-                    c("smrdíš!")
+                if( !email.includes(domain) ){
+                    yourEmailAddress.classList.add("wrongInput")
+                } else{
+                    yourEmailAddress.classList.remove("wrongInput")
+                    c("smrdíš")
                 }
             }
-
-        )
+)
     }
 
 
