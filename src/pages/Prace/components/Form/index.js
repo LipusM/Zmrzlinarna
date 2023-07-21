@@ -26,7 +26,7 @@ export const Form = () => {
 
         <div class="mb-3 col-md-6">
             <label for="yourEmail" class="form-label">E-mail *</label>
-            <input type="email" class="form-control" id="yourEmail" placeholder="Zadejte svůj e-mail">
+            <input type="text" class="form-control" id="yourEmail" placeholder="Zadejte svůj e-mail">
         </div>
 
         <div class="mb-3 col-md-6">
@@ -86,55 +86,86 @@ export const Form = () => {
     const yourName = element.querySelector("#nameSurname")
     const yourJob = element.querySelector("#jobPosition")
     const yourEmailAddress = element.querySelector("#yourEmail")
+    const yourPhone = element.querySelector("#phone")
 
     const sendForm = (e) => {
         e.preventDefault()
 
         nameCheck(yourName.value)
+        c(nameCheck(yourName.value))
 
         jobCheck(yourJob.value)
+        c(jobCheck(yourJob.value))
 
         emailCheck(yourEmailAddress.value)
+        c(emailCheck(yourEmailAddress.value))
+
+        phoneCheck(yourPhone.value)
+        c(phoneCheck(yourPhone.value))
     }
 
     //Kontrola jména
+    let yourNameCheck = false
+
     const nameCheck = (name) => {
         if (name === "") {
             yourName.classList.add("wrongInput")
         } else {
             yourName.classList.remove("wrongInput")
+            yourNameCheck = true
         }
+
+        return yourNameCheck
     }
 
     //Kontrola výběru pracovní pozice
+    let jobChoiceCheck = false
+
     const jobCheck = (job) => {
         if (job === "") {
             yourJob.classList.add("wrongInput")
         } else {
             yourJob.classList.remove("wrongInput")
+            jobChoiceCheck = true
         }
+
+        return jobChoiceCheck
     }
 
     //Kontrola e-mailu
-    const domain = ["@gmail.com", "@yahoo.com", "@seznam.cz", "@email.cz", "@volny.cz", "@protonmail.com"]
-    const emailInfo = {
-        domains: [".com", ".cz", ".co.uk", ".de", ".sk"],
-        sign: "@"
-    }
+    let emailDomainCheck = false
+
+    const domains = ["@gmail.com", "@yahoo.com", "@seznam.cz", "@email.cz", "@volny.cz", "@protonmail.com", "@email.sk"]
 
     const emailCheck = (email) => {
 
-        emailInfo.domains.filter(domain => 
+        domains.some(domain => 
 
-            {
-                if( !email.includes(domain) ){
-                    yourEmailAddress.classList.add("wrongInput")
-                } else{
-                    yourEmailAddress.classList.remove("wrongInput")
-                    c("smrdíš")
-                }
-            }
-)
+                {
+                    if( !email.includes(domain) ){
+                        yourEmailAddress.classList.add("wrongInput")
+                    } else {
+                        yourEmailAddress.classList.remove("wrongInput")
+                        return emailDomainCheck = true
+                    }
+                })
+                
+        return emailDomainCheck
+    }
+
+    //Kontrola telefonu
+    let phoneNumberCheck = false
+
+    const phoneCheck = (phone) => {
+
+        if(phone.length  !== 9){
+            yourPhone.classList.add("wrongInput")
+        } else {
+            yourPhone.classList.remove("wrongInput")
+            phoneNumberCheck = true
+        }
+
+        return phoneNumberCheck
     }
 
 
