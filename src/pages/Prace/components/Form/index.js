@@ -91,24 +91,24 @@ export const Form = () => {
     const sendForm = (e) => {
         e.preventDefault()
 
-        nameCheck(yourName.value)
-        c(nameCheck(yourName.value))
+        nameCheck()
+        c(nameCheck())
 
-        jobCheck(yourJob.value)
-        c(jobCheck(yourJob.value))
+        jobCheck()
+        c(jobCheck())
 
-        emailCheck(yourEmailAddress.value)
-        c(emailCheck(yourEmailAddress.value))
+        emailCheck()
+        c(emailCheck())
 
-        phoneCheck(yourPhone.value)
-        c(phoneCheck(yourPhone.value))
+        phoneCheck()
+        c(phoneCheck())
     }
 
     //Kontrola jména
     let yourNameCheck = false
 
-    const nameCheck = (name) => {
-        if (name === "") {
+    const nameCheck = () => {
+        if (yourName.value === "") {
             yourName.classList.add("wrongInput")
         } else {
             yourName.classList.remove("wrongInput")
@@ -121,8 +121,8 @@ export const Form = () => {
     //Kontrola výběru pracovní pozice
     let jobChoiceCheck = false
 
-    const jobCheck = (job) => {
-        if (job === "") {
+    const jobCheck = () => {
+        if (yourJob.value === "") {
             yourJob.classList.add("wrongInput")
         } else {
             yourJob.classList.remove("wrongInput")
@@ -137,17 +137,30 @@ export const Form = () => {
 
     const domains = ["@gmail.com", "@yahoo.com", "@seznam.cz", "@email.cz", "@volny.cz", "@protonmail.com", "@email.sk"]
 
-    const emailCheck = (email) => {
+    const emailCheck = () => {
 
         domains.some(domain => 
 
                 {
-                    if( !email.includes(domain) ){
+                    if( !yourEmailAddress.value.includes(domain) ){
                         yourEmailAddress.classList.add("wrongInput")
-                    } else {
-                        yourEmailAddress.classList.remove("wrongInput")
-                        return emailDomainCheck = true
-                    }
+                    } 
+                    else {
+
+                        let partDomain = domain.slice(0, -1)
+                        let lastPartDomain = domain.slice(-1)
+                        let entireDomain = partDomain + lastPartDomain
+
+                        let signIndex = yourEmailAddress.value.indexOf("@")
+                        
+                        if( entireDomain !== yourEmailAddress.value.slice(signIndex) ){
+                            yourEmailAddress.classList.add("wrongInput")
+                        } else{
+                            yourEmailAddress.classList.remove("wrongInput")
+                            return emailDomainCheck = true
+                        }
+                    } 
+                    
                 })
                 
         return emailDomainCheck
@@ -156,9 +169,9 @@ export const Form = () => {
     //Kontrola telefonu
     let phoneNumberCheck = false
 
-    const phoneCheck = (phone) => {
+    const phoneCheck = () => {
 
-        if(phone.length  !== 9){
+        if(yourPhone.value.length  !== 9){
             yourPhone.classList.add("wrongInput")
         } else {
             yourPhone.classList.remove("wrongInput")
