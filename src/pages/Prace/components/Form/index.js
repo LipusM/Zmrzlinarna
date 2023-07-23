@@ -100,14 +100,15 @@ export const Form = () => {
     }
 
     //Kontrola výběru pracovní pozice
-    const yourJob = element.querySelector("#jobPosition")
+    const wrJob = element.querySelector("#jobPosition")
     let jobChoiceCheck = false
 
     const jobCheck = () => {
-        if (yourJob.value === "") {
-            yourJob.classList.add("wrongInput")
+
+        if (wrJob.value === "") {
+            wrJob.classList.add("wrongInput")
         } else {
-            yourJob.classList.remove("wrongInput")
+            wrJob.classList.remove("wrongInput")
             jobChoiceCheck = true
         }
 
@@ -116,20 +117,20 @@ export const Form = () => {
 
     //Všechny funkce pro verifikaci formuláře
     //Kontrola e-mailu
-    const yourEmailAddress = element.querySelector("#yourEmail")
+    const wrEmail = element.querySelector("#yourEmail")
     let emailDomainCheck = false
 
     const domains = ["@gmail.com", "@yahoo.com", "@seznam.cz", "@email.cz", "@volny.cz", "@protonmail.com", "@email.sk"]
 
     const emailCheck = () => {
 
-        const emailValue = yourEmailAddress.value
+        const emailValue = wrEmail.value
 
         domains.some(domain => 
 
                 {
                     if( !emailValue.includes(domain) ){
-                        yourEmailAddress.classList.add("wrongInput")
+                        wrEmail.classList.add("wrongInput")
                     } 
                     else {
 
@@ -141,9 +142,9 @@ export const Form = () => {
 
                         //Zjišťování, zdali se vstup od @ (včetně) rovná hodnotám v DOMAINS. Také zdali před @ existuje hodnota
                         if( entireDomain !== emailValue.slice(signIndex) || emailValue.slice(0, signIndex) === "" ){
-                            yourEmailAddress.classList.add("wrongInput")
+                            wrEmail.classList.add("wrongInput")
                         } else{
-                            yourEmailAddress.classList.remove("wrongInput")
+                            wrEmail.classList.remove("wrongInput")
                             return emailDomainCheck = true
                         }
                     }   
@@ -152,15 +153,15 @@ export const Form = () => {
     }
 
     //Kontrola telefonu
-    const yourPhone = element.querySelector("#phone")
+    const wrPhone = element.querySelector("#phone")
     let phoneNumberCheck = false
 
     const phoneCheck = () => {
 
-        if(yourPhone.value.length  !== 9){
-            yourPhone.classList.add("wrongInput")
+        if(wrPhone.value.length  !== 9){
+            wrPhone.classList.add("wrongInput")
         } else {
-            yourPhone.classList.remove("wrongInput")
+            wrPhone.classList.remove("wrongInput")
             phoneNumberCheck = true
         }
 
@@ -168,41 +169,97 @@ export const Form = () => {
     }
 
     //Kontrola nahraného CV
-    const yourCV = element.querySelector("#cvFile")
+    const upCV = element.querySelector("#cvFile")
     let cV = false
 
     const cvCheck = () => {
         
-        if( yourCV.value === "" ){
-            yourCV.classList.add("wrongInput")
+        if( upCV.value === "" ){
+            upCV.classList.add("wrongInput")
         } else {
-            yourCV.classList.remove("wrongInput")
+            upCV.classList.remove("wrongInput")
             cV = true
         }
 
         return cV
     }
 
+    //Kontrola nahrané fotografie
+    const upPhoto = element.querySelector("#yourImage")
+    let photo = false
+
+    const photoCheck = () => {
+
+        if( upPhoto.value === "" ){
+            upPhoto.classList.add("wrongInput")
+        } else {
+            upPhoto.classList.remove("wrongInput")
+            photo = true
+        }
+
+        return photo
+    }
+
+    //Kontrola Odkus jste se o nás dozvěděli
+    const wrAboutUs = element.querySelector("#knowUs")
+    let aboutUs = false
+
+    const aboutUsCheck = () => {
+
+        if (wrAboutUs.value === "") {
+            wrAboutUs.classList.add("wrongInput")
+        } else {
+            wrAboutUs.classList.remove("wrongInput")
+            aboutUs = true
+        }
+
+        return aboutUs
+    }
+
+    //Kontrola, zdali byl napsaný text do textového pole
+    const wrAboutYou = element.querySelector("#aboutYou")
+    const you = false
+    
+    const aboutYouCheck = () => {
+
+        if (wrAboutYou.value === "") {
+            wrAboutYou.classList.add("wrongInput")
+        } else {
+            wrAboutYou.classList.remove("wrongInput")
+            you = true
+        }
+
+        return you
+    }
 
 
     //Odesílání formuláře a vyhodnocení výše napsaných funkcí
     const sendForm = (e) => {
         e.preventDefault()
 
-        nameCheck()
+        nameCheck
         c(nameCheck())
 
-        jobCheck()
+        jobCheck
         c(jobCheck())
 
-        emailCheck()
+        emailCheck
         c(emailCheck())
 
-        phoneCheck()
+        phoneCheck
         c(phoneCheck())
 
-        cvCheck()
+        cvCheck
         c(cvCheck())
+
+        photoCheck
+        c(photoCheck())
+
+        aboutUsCheck
+        c(aboutUsCheck())
+
+        aboutYouCheck
+        c(aboutYouCheck())
     }
 
 
