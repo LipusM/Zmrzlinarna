@@ -36,12 +36,12 @@ export const Form = () => {
 
         <div class="mb-3 col-md-6 inputFile">
             <label for="cvFile" class="form-label">Životopis *</label>
-            <input type="file" id="cvFile">
+            <input type="file" accept=".pdf, .docx" id="cvFile">
         </div>
 
         <div class="mb-3 col-md-6 inputFile">
             <label for="yourImage" class="form-label">Fotografie *</label>
-            <input type="file" id="yourImage">
+            <input type="file" accept=".jpg, .jpeg, .png" id="yourImage">
         </div>
 
         <div class="mb-3 col-md-6">
@@ -83,28 +83,9 @@ export const Form = () => {
 
 
     //FUNKCE PRO ZPRACOVÁNÍ FORMULÁŘE
-    const yourName = element.querySelector("#nameSurname")
-    const yourJob = element.querySelector("#jobPosition")
-    const yourEmailAddress = element.querySelector("#yourEmail")
-    const yourPhone = element.querySelector("#phone")
-
-    const sendForm = (e) => {
-        e.preventDefault()
-
-        nameCheck()
-        c(nameCheck())
-
-        jobCheck()
-        c(jobCheck())
-
-        emailCheck()
-        c(emailCheck())
-
-        phoneCheck()
-        c(phoneCheck())
-    }
 
     //Kontrola jména
+    const yourName = element.querySelector("#nameSurname")
     let yourNameCheck = false
 
     const nameCheck = () => {
@@ -119,6 +100,7 @@ export const Form = () => {
     }
 
     //Kontrola výběru pracovní pozice
+    const yourJob = element.querySelector("#jobPosition")
     let jobChoiceCheck = false
 
     const jobCheck = () => {
@@ -132,41 +114,45 @@ export const Form = () => {
         return jobChoiceCheck
     }
 
+    //Všechny funkce pro verifikaci formuláře
     //Kontrola e-mailu
+    const yourEmailAddress = element.querySelector("#yourEmail")
     let emailDomainCheck = false
 
     const domains = ["@gmail.com", "@yahoo.com", "@seznam.cz", "@email.cz", "@volny.cz", "@protonmail.com", "@email.sk"]
 
     const emailCheck = () => {
 
+        const emailValue = yourEmailAddress.value
+
         domains.some(domain => 
 
                 {
-                    if( !yourEmailAddress.value.includes(domain) ){
+                    if( !emailValue.includes(domain) ){
                         yourEmailAddress.classList.add("wrongInput")
                     } 
                     else {
 
-                        let partDomain = domain.slice(0, -1)
-                        let lastPartDomain = domain.slice(-1)
-                        let entireDomain = partDomain + lastPartDomain
+                        let partDomain = domain.slice(0, -1) //Od začátku domény do konce
+                        let lastPartDomain = domain.slice(-1) //Zjištění poslední hodnoty domény
+                        let entireDomain = partDomain + lastPartDomain //Výpis celé vložené domény
 
-                        let signIndex = yourEmailAddress.value.indexOf("@")
-                        
-                        if( entireDomain !== yourEmailAddress.value.slice(signIndex) ){
+                        let signIndex = emailValue.indexOf("@")
+
+                        //Zjišťování, zdali se vstup od @ (včetně) rovná hodnotám v DOMAINS. Také zdali před @ existuje hodnota
+                        if( entireDomain !== emailValue.slice(signIndex) || emailValue.slice(0, signIndex) === "" ){
                             yourEmailAddress.classList.add("wrongInput")
                         } else{
                             yourEmailAddress.classList.remove("wrongInput")
                             return emailDomainCheck = true
                         }
-                    } 
-                    
+                    }   
                 })
-                
         return emailDomainCheck
     }
 
     //Kontrola telefonu
+    const yourPhone = element.querySelector("#phone")
     let phoneNumberCheck = false
 
     const phoneCheck = () => {
@@ -179,6 +165,44 @@ export const Form = () => {
         }
 
         return phoneNumberCheck
+    }
+
+    //Kontrola nahraného CV
+    const yourCV = element.querySelector("#cvFile")
+    let cV = false
+
+    const cvCheck = () => {
+        
+        if( yourCV.value === "" ){
+            yourCV.classList.add("wrongInput")
+        } else {
+            yourCV.classList.remove("wrongInput")
+            cV = true
+        }
+
+        return cV
+    }
+
+
+
+    //Odesílání formuláře a vyhodnocení výše napsaných funkcí
+    const sendForm = (e) => {
+        e.preventDefault()
+
+        nameCheck()
+        c(nameCheck())
+
+        jobCheck()
+        c(jobCheck())
+
+        emailCheck()
+        c(emailCheck())
+
+        phoneCheck()
+        c(phoneCheck())
+
+        cvCheck()
+        c(cvCheck())
     }
 
 
