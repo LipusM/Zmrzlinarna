@@ -247,21 +247,19 @@ export const Form = () => {
     }
 
     //Skrytí děkovné zprávy
-/*     const hideThankYouMessage = () => {
+    const theMessage = element.querySelector("#thankYou")
 
-        const theMessage = element.querySelector("#thankYou")
-        theMessage.classList.remove("messageShown")
-    } */
+    const  hideThankYouMessage = () => {
+        
+        theMessage.style.opacity = 1;
 
-    function hideThankYouMessage() {
-        var element = document.getElementById("thankYouMessage");
-        element.style.opacity = 1;
-        setInterval(function() {
-          element.style.opacity -= 0.1;
-          if (element.style.opacity < 0) {
-            element.style.display = "none";
-          }
-        }, 100);
+        setInterval( () => {
+            theMessage.style.opacity -= 0.1
+
+            if(theMessage.style.opacity < 0){
+                theMessage.classList.remove("messageShown")
+            }
+        }, 50)
       }
 
 
