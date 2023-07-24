@@ -236,6 +236,9 @@ export const Form = () => {
         return you
     }
 
+    //FB profil
+    const wrFB = element.querySelector("#fbProfile")
+
     //Zobrazení děkovné zprávy
     const thankYouMessage = () => {
 
@@ -244,11 +247,22 @@ export const Form = () => {
     }
 
     //Skrytí děkovné zprávy
-    const hideThankYouMessage = () => {
+/*     const hideThankYouMessage = () => {
 
         const theMessage = element.querySelector("#thankYou")
         theMessage.classList.remove("messageShown")
-    }
+    } */
+
+    function hideThankYouMessage() {
+        var element = document.getElementById("thankYouMessage");
+        element.style.opacity = 1;
+        setInterval(function() {
+          element.style.opacity -= 0.1;
+          if (element.style.opacity < 0) {
+            element.style.display = "none";
+          }
+        }, 100);
+      }
 
 
     //Odesílání formuláře a vyhodnocení výše napsaných funkcí
@@ -281,7 +295,15 @@ export const Form = () => {
 
 
         if(nameReturn && jobReturn && emailReturn && phoneReturn && cvReturn && photoReturn && aboutUsReturn && aboutYouReturn){
-            
+            yourName.value = ""
+            wrJob.value = ""
+            wrEmail.value = ""
+            wrPhone.value = ""
+            upCV.value = ""
+            upPhoto.value = ""
+            wrAboutUs.value = ""
+            wrAboutYou.value = ""
+            wrFB.value = ""
 
             thankYouMessage()
             setTimeout(hideThankYouMessage, 3000)
