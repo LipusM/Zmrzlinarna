@@ -68,6 +68,22 @@ form{
         background-color: #fceeeb !important;
     }
 
+    .messageNone{
+        display: none;
+    }
+
+    .messageShown{
+        text-align: center;
+
+        margin-bottom: 20px;
+        padding: 10px;
+
+        color: white;
+        background-color: $primaryColor;
+
+        display: block;
+    }
+
 }
 
 @media (max-width: 900px){

@@ -8,6 +8,10 @@ export const Form = () => {
     const element = document.createElement("form")
 
     element.innerHTML = `
+    <div id="thankYou" class="messageNone">
+        Děkujeme za Váš zájem u nás pracovat. V případě zájmu Vás budeme kontaktovat.
+    </div>
+
     <div class="row" id="jobForm">
         <div class="mb-3 col-md-6">
             <label for="nameSurname" class="form-label">Jméno a příjmení *</label>
@@ -218,7 +222,7 @@ export const Form = () => {
 
     //Kontrola, zdali byl napsaný text do textového pole
     const wrAboutYou = element.querySelector("#aboutYou")
-    const you = false
+    let you = false
     
     const aboutYouCheck = () => {
 
@@ -232,34 +236,56 @@ export const Form = () => {
         return you
     }
 
+    //Zobrazení děkovné zprávy
+    const thankYouMessage = () => {
+
+        const theMessage = element.querySelector("#thankYou")
+        theMessage.classList.add("messageShown")
+    }
+
+    //Skrytí děkovné zprávy
+    const hideThankYouMessage = () => {
+
+        const theMessage = element.querySelector("#thankYou")
+        theMessage.classList.remove("messageShown")
+    }
+
 
     //Odesílání formuláře a vyhodnocení výše napsaných funkcí
     const sendForm = (e) => {
         e.preventDefault()
 
-        nameCheck
-        c(nameCheck())
+        nameCheck()
+        let nameReturn = nameCheck()
 
-        jobCheck
-        c(jobCheck())
+        jobCheck()
+        let jobReturn = jobCheck()
 
-        emailCheck
-        c(emailCheck())
+        emailCheck()
+        let emailReturn = emailCheck()
 
-        phoneCheck
-        c(phoneCheck())
+        phoneCheck()
+        let phoneReturn = phoneCheck()
 
-        cvCheck
-        c(cvCheck())
+        cvCheck()
+        let cvReturn = cvCheck()
 
-        photoCheck
-        c(photoCheck())
+        photoCheck()
+        let photoReturn = photoCheck()
 
-        aboutUsCheck
-        c(aboutUsCheck())
+        aboutUsCheck()
+        let aboutUsReturn = aboutUsCheck()
 
-        aboutYouCheck
-        c(aboutYouCheck())
+        aboutYouCheck()
+        let aboutYouReturn = aboutYouCheck()
+
+
+        if(nameReturn && jobReturn && emailReturn && phoneReturn && cvReturn && photoReturn && aboutUsReturn && aboutYouReturn){
+            
+
+            thankYouMessage()
+            setTimeout(hideThankYouMessage, 3000)
+        }
     }
 
 
