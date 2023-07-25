@@ -262,7 +262,6 @@ export const Form = () => {
         }, 50)
       }
 
-
     //Odesílání formuláře a vyhodnocení výše napsaných funkcí
     const sendForm = (e) => {
         e.preventDefault()
@@ -307,7 +306,6 @@ export const Form = () => {
             setTimeout(hideThankYouMessage, 3000)
         }
     }
-
 
     element.addEventListener("submit", sendForm)
 
