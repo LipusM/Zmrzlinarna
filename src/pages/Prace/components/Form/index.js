@@ -120,7 +120,6 @@ export const Form = () => {
         return jobChoiceCheck
     }
 
-    //Všechny funkce pro verifikaci formuláře
     //Kontrola e-mailu
     const wrEmail = element.querySelector("#yourEmail")
     let emailDomainCheck = false

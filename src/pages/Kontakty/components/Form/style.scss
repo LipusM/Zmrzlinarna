@@ -3,57 +3,85 @@ $secondaryColor: #4a4a4a;
 
 form {
     width: 50%;
-    margin: auto;
-    margin-bottom: 20px;
+    margin: 20px auto;
     
     font-family: 'museo-sans', sans-serif;
     color: $secondaryColor;
 
 
-    input, textarea{
-        box-shadow: none !important;
-        border: solid 1px !important;
-        padding: 1rem !important;
 
-        &::placeholder{
-            color: oran !important;
-            font-family: 'museo-sans', sans-serif;
+
+    #contactsForm{
+
+        input, textarea{
+            box-shadow: none !important;
+            border: solid 1px !important;
+            padding: 1rem !important;
+    
+            &::placeholder{
+                color: $secondaryColor !important;
+                font-family: 'museo-sans', sans-serif;
+            }
+
+            label{
+                color: blue !important;
+            }
+        }
+    
+    
+        #infoAndButtonContacts{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+    
+            a{
+                color: $primaryColor;
+                text-decoration: none;
+                font-weight: bold;
+            }
+    
+            button{
+                background-color: transparent;
+                border: solid 1px $primaryColor;
+                color: $primaryColor;
+                font-weight: 500;
+    
+                padding: 0.75rem 1.5rem;
+    
+                width: 168px;
+    
+                transition: ease-in-out 300ms;
+    
+                &:focus{
+                    box-shadow: none;
+                }
+    
+                &:hover{
+                    color: white;
+                    background-color: $primaryColor;
+                }
+            }
         }
     }
 
+    .wrongInput{
+        background-color: #fceeeb !important;
+    }
 
-    #infoAndButtonContacts{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+    .messageNone{
+        display: none;
 
-        a{
-            color: $primaryColor;
-            text-decoration: none;
-            font-weight: bold;
-        }
+        text-align: center;
 
-        button{
-            background-color: transparent;
-            border: solid 1px $primaryColor;
-            color: $primaryColor;
-            font-weight: 500;
+        margin-bottom: 20px;
+        padding: 10px;
 
-            padding: 0.75rem 1.5rem;
+        color: white;
+        background-color: $primaryColor;
+    }
 
-            width: 168px;
-
-            transition: ease-in-out 300ms;
-
-            &:focus{
-                box-shadow: none;
-            }
-
-            &:hover{
-                color: white;
-                background-color: $primaryColor;
-            }
-        }
+    .messageShown{
+        display: block;
     }
 
 }
