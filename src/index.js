@@ -23,7 +23,7 @@ else if(page === "/e-shop"){
 else if(page === "/prace"){
     pageElement.append(Prace())
 }
-else if(page === "/konatky"){
+else if(page === "/kontakty"){
     pageElement.append(Kontakty())
 }
 else if(page === "/ochrana-osobnich-udaju"){

@@ -1,0 +1,25 @@
+$primaryColor: #691103;
+$secondaryColor: #4a4a4a;
+
+#introText{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    margin-top: 20px;
+    
+    font-family: 'museo-sans', sans-serif;
+    color: $secondaryColor;
+
+    h2{
+        margin-bottom: 1rem;
+
+        color: $secondaryColor;
+    }
+
+    a{
+        margin-bottom: 3rem;
+
+        text-decoration: none;
+        color: $primaryColor;
+    }
+}

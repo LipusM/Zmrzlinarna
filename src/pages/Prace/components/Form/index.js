@@ -6,13 +6,14 @@ import "./style.scss"
 export const Form = () => {
 
     const element = document.createElement("form")
+    element.setAttribute("id", "jobForm")
 
     element.innerHTML = `
     <div id="thankYou" class="messageNone">
         Děkujeme za Váš zájem u nás pracovat. V případě zájmu Vás budeme kontaktovat.
     </div>
 
-    <div class="row" id="jobForm">
+    <div class="row">
         <div class="mb-3 col-md-6">
             <label for="nameSurname" class="form-label">Jméno a příjmení *</label>
             <input type="text" class="form-control" id="nameSurname" placeholder="Zadejte své jméno a příjmení">
