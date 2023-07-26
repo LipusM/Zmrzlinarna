@@ -8,7 +8,7 @@ export const Form = () => {
     /* element.setAttribute("id", "contactsForm") */
 
     element.innerHTML = `
-    <div id="thankYou" class="messageNone">
+    <div id="thankYou" class="messageNoneC">
         Děkujeme za Váš zájem u nás pracovat. V případě zájmu Vás budeme kontaktovat.
     </div>
 
@@ -55,11 +55,12 @@ export const Form = () => {
 
     //Kontrola jména
     const yourName = element.querySelector("#name")
-    let yourNameCheck = false
+    let yourNameCheck = ""
 
     const nameCheck = () => {
         if (yourName.value === "") {
             yourName.classList.add("wrongInput")
+            yourNameCheck = false
         } else {
             yourName.classList.remove("wrongInput")
             yourNameCheck = true
@@ -70,7 +71,7 @@ export const Form = () => {
 
     //Kontrola e-mailu
     const wrEmail = element.querySelector("#yourEmail")
-    let emailDomainCheck = false
+    let emailDomainCheck = ""
 
     const domains = ["@gmail.com", "@yahoo.com", "@seznam.cz", "@email.cz", "@volny.cz", "@protonmail.com", "@email.sk"]
 
@@ -83,6 +84,7 @@ export const Form = () => {
             {
                 if (!emailValue.includes(domain)) {
                     wrEmail.classList.add("wrongInput")
+                    emailDomainCheck = false
                 } else {
 
                     let partDomain = domain.slice(0, -1) //Od začátku domény do konce
@@ -94,6 +96,7 @@ export const Form = () => {
                     //Zjišťování, zdali se vstup od @ (včetně) rovná hodnotám v DOMAINS. Také zdali před @ existuje hodnota
                     if (entireDomain !== emailValue.slice(signIndex) || emailValue.slice(0, signIndex) === "") {
                         wrEmail.classList.add("wrongInput")
+                        emailDomainCheck = false
                     } else {
                         wrEmail.classList.remove("wrongInput")
                         return emailDomainCheck = true
@@ -106,41 +109,50 @@ export const Form = () => {
 
     //Kontrola, zdali byl napsaný text do textového pole
     const wrMessage = element.querySelector("#textMessage")
-    let you = false
+    let yourMessage = ""
 
     const aboutYouCheck = () => {
 
         if (wrMessage.value === "") {
             wrMessage.classList.add("wrongInput")
+            yourMessage = false
         } else {
             wrMessage.classList.remove("wrongInput")
-            you = true
+            yourMessage = true
         }
 
-        return you
+        return yourMessage
     }
 
     //Zobrazení děkovné zprávy
+    const theMessage = element.querySelector("#thankYou")
+
     const thankYouMessage = () => {
 
-        const theMessage = element.querySelector("#thankYou")
+        /* const theMessage = element.querySelector("#thankYou") */
         theMessage.classList.add("messageShown")
+
+        /* setTimeout(theMessage.classList.remove("messageShown"), 3000) */
     }
 
     //Skrytí děkovné zprávy
-    const theMessage = element.querySelector("#thankYou")
+   /*  const theMessage = element.querySelector("#thankYou") */
 
     const hideThankYouMessage = () => {
 
-        theMessage.style.opacity = 1;
+            theMessage.style.opacity = 1
 
-        setInterval(() => {
-            theMessage.style.opacity -= 0.1
+            const interval = setInterval(() => {
+                theMessage.style.opacity -= 0.1
+    
+                if (theMessage.style.opacity < 0) {
+                    theMessage.classList.remove("messageShown")
+                    theMessage.style.opacity = 1
+                    clearInterval(interval)
+                }
+            }, 50)
 
-            if (theMessage.style.opacity < 0) {
-                theMessage.classList.remove("messageShown")
-            }
-        }, 50)
+
     }
 
     const sendContactsForm = (e) => {

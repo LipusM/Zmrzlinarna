@@ -3,7 +3,7 @@ import "./style.scss"
 
 export const IntroText = () => {
 
-    const element = document.createElement("div")
+    const element = document.createElement("section")
     element.setAttribute("id", "introText")
     
     element.innerHTML = `
