@@ -96,6 +96,7 @@ export const Form = () => {
     const nameCheck = () => {
         if (yourName.value === "") {
             yourName.classList.add("wrongInput")
+            yourNameCheck = false
         } else {
             yourName.classList.remove("wrongInput")
             yourNameCheck = true
@@ -112,6 +113,7 @@ export const Form = () => {
 
         if (wrJob.value === "") {
             wrJob.classList.add("wrongInput")
+            jobChoiceCheck = false
         } else {
             wrJob.classList.remove("wrongInput")
             jobChoiceCheck = true
@@ -135,6 +137,7 @@ export const Form = () => {
                 {
                     if( !emailValue.includes(domain) ){
                         wrEmail.classList.add("wrongInput")
+                        emailDomainCheck = false
                     } 
                     else {
 
@@ -147,6 +150,7 @@ export const Form = () => {
                         //Zjišťování, zdali se vstup od @ (včetně) rovná hodnotám v DOMAINS. Také zdali před @ existuje hodnota
                         if( entireDomain !== emailValue.slice(signIndex) || emailValue.slice(0, signIndex) === "" ){
                             wrEmail.classList.add("wrongInput")
+                            emailDomainCheck = false
                         } else{
                             wrEmail.classList.remove("wrongInput")
                             return emailDomainCheck = true

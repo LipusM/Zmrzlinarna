@@ -55,7 +55,7 @@ export const Form = () => {
 
     //Kontrola jména
     const yourName = element.querySelector("#name")
-    let yourNameCheck = ""
+    let yourNameCheck = false
 
     const nameCheck = () => {
         if (yourName.value === "") {
@@ -71,7 +71,7 @@ export const Form = () => {
 
     //Kontrola e-mailu
     const wrEmail = element.querySelector("#yourEmail")
-    let emailDomainCheck = ""
+    let emailDomainCheck = false
 
     const domains = ["@gmail.com", "@yahoo.com", "@seznam.cz", "@email.cz", "@volny.cz", "@protonmail.com", "@email.sk"]
 
@@ -109,7 +109,7 @@ export const Form = () => {
 
     //Kontrola, zdali byl napsaný text do textového pole
     const wrMessage = element.querySelector("#textMessage")
-    let yourMessage = ""
+    let yourMessage = false
 
     const aboutYouCheck = () => {
 
