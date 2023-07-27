@@ -30,3 +30,10 @@ $secondaryColor: #4a4a4a;
     }
 
 }
+
+@media (max-width: 900px){
+
+    #errorPage{
+        width: 75%;
+    }
+}

@@ -10,6 +10,7 @@ import { Kontakty } from './pages/Kontakty/index.js'
 import { Footer } from './components/Footer/index.js'
 import { PersonalInfo } from './pages/PersonalInfo';
 import { Error } from './pages/Error';
+/* import { Faq } from "./pages/Faq" */
 
 const pageElement = document.querySelector("#app")
 const page = location.pathname
@@ -29,7 +30,11 @@ else if(page === "/kontakty"){
 }
 else if(page === "/ochrana-osobnich-udaju"){
     pageElement.append(PersonalInfo())
-} else{
+}
+/* else if(page === "/faq"){
+    pageElement.append(Faq())
+} */
+else {
     pageElement.append(Error())
 }
 
