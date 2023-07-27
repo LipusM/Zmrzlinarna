@@ -3,7 +3,11 @@ $secondaryColor: #4a4a4a;
 
 #errorPage {
     width: 50%;
-    margin: auto;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
     font-family: 'museo-sans', sans-serif;
     color: $secondaryColor;
@@ -14,10 +18,10 @@ $secondaryColor: #4a4a4a;
         font-weight: 100;
     }
 
-    ol{
-        li{
-            &:nth-of-type(2){
-                a{
+    ol {
+        li {
+            &:nth-of-type(2) {
+                a {
                     text-decoration: none;
                     color: $primaryColor;
                 }
