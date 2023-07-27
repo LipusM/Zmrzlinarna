@@ -1,0 +1,28 @@
+$primaryColor: #691103;
+$secondaryColor: #4a4a4a;
+
+#errorPage {
+    width: 50%;
+    margin: auto;
+
+    font-family: 'museo-sans', sans-serif;
+    color: $secondaryColor;
+
+    h1 {
+        text-align: center;
+        font-size: 3.5rem;
+        font-weight: 100;
+    }
+
+    ol{
+        li{
+            &:nth-of-type(2){
+                a{
+                    text-decoration: none;
+                    color: $primaryColor;
+                }
+            }
+        }
+    }
+
+}

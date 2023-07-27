@@ -9,6 +9,7 @@ import { Prace } from './pages/Prace/index.js'
 import { Kontakty } from './pages/Kontakty/index.js'
 import { Footer } from './components/Footer/index.js'
 import { PersonalInfo } from './pages/PersonalInfo';
+import { Error } from './pages/Error';
 
 const pageElement = document.querySelector("#app")
 const page = location.pathname
@@ -28,7 +29,10 @@ else if(page === "/kontakty"){
 }
 else if(page === "/ochrana-osobnich-udaju"){
     pageElement.append(PersonalInfo())
+} else{
+    pageElement.append(Error())
 }
+
 pageElement.append(Footer())
 
 
