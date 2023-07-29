@@ -1,0 +1,70 @@
+$primaryColor: #691103;
+$secondaryColor: #4a4a4a;
+
+#faqBanner {
+    height: 600px;
+
+    background-image: url("./img/uvodBanner.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    position: relative;
+
+    #faqBannerText{
+        width: max-content;
+
+        position: absolute;
+        right: 50%;
+        top: 30%;
+
+        h1{
+            color: $secondaryColor;
+
+            &:nth-of-type(1){
+                font-weight: 100;
+            }
+
+            &:nth-of-type(2){
+                font-weight: 600;
+            }
+        }
+    }
+
+    #faqArrow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        a {
+            position: absolute;
+            bottom: 5%;
+
+            img {
+                padding: 5px;
+                border-radius: 50%;
+
+                width: 50px;
+
+                background: rgb(255, 255, 255, 0.6);
+                transition: ease-in-out 500ms;
+
+                &:hover {
+                    background: rgb(255, 255, 255, 1);
+                }
+            }
+        }
+    }
+    
+}
+
+@media (max-width: 900px){
+    #faqBanner{
+        background-position: right;
+
+        #faqBannerText{
+            top: 15%;
+            right: 20%;
+        }
+    }
+}
