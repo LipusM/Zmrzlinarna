@@ -52,11 +52,12 @@ export const Faq = () => {
         c(section.heading)
         /* c(section.questionsAnswers) */
 
-        const questionAnswer = section.questionsAnswers.map(questionAnswer => {
-            c(questionAnswer.question)
-            c(questionAnswer.answer)
-            
-        })
+        const questionAnswer = section.questionsAnswers.map(questionAnswer => ({
+            question: questionAnswer.question,
+            answer: questionAnswer.answer
+            })  
+        )
+        c(questionAnswer)
         
 
     })
