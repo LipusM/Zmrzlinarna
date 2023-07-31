@@ -31,6 +31,8 @@ export const Faq = () => {
             ]
         },
 
+        
+
         {
             heading: "Dárkové poukazy",
             questionsAnswers: [
@@ -47,27 +49,28 @@ export const Faq = () => {
     ]
 
 
-    const sections = allAquestions.map(section => {
-        /* c(section.heading) */
+    const sections2 = allAquestions.map(section => {
         c(section.heading)
-        /* c(section.questionsAnswers) */
+        
+        c(section.questionsAnswers)
 
-        const questionAnswer = section.questionsAnswers.map(questionAnswer => ({
+/*         const questionAnswer = section.questionsAnswers.map(questionAnswer => ({
             question: questionAnswer.question,
             answer: questionAnswer.answer
             })  
         )
-        c(questionAnswer)
+        c(questionAnswer) */
         
 
     })
+
     
 
     const element = document.createElement("main")
 
     element.append(FaqBanner(),
         FaqQuestions({
-
+            
         }))
 
     return element

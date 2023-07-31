@@ -2,9 +2,7 @@ const c = console.log.bind(document)
 
 import "./style.scss"
 
-export const FaqQuestions = (props) => {
-
-    const { heading, question, answer } = props
+export const FaqQuestions = (prop) => {
 
 
     const element = document.createElement("section")
