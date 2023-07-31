@@ -11,7 +11,7 @@ import {
 
 export const Faq = () => {
 
-    const allAquestions = [
+    const allInfo = [
 
         {
             heading: "Naše zmrzlina",
@@ -49,28 +49,24 @@ export const Faq = () => {
     ]
 
 
-    const sections2 = allAquestions.map(section => {
-        c(section.heading)
+    
+    const sections = allInfo.map(section => {
+       
+        const headings = section.heading
+        const allQuestions = section.questionsAnswers
         
-        c(section.questionsAnswers)
+        const data = (headings, allQuestions)
 
-/*         const questionAnswer = section.questionsAnswers.map(questionAnswer => ({
-            question: questionAnswer.question,
-            answer: questionAnswer.answer
-            })  
-        )
-        c(questionAnswer) */
-        
+        return data
 
     })
-
-    
+    c(sections)
 
     const element = document.createElement("main")
 
     element.append(FaqBanner(),
         FaqQuestions({
-            
+            section: sections
         }))
 
     return element
