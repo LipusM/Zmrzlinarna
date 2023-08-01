@@ -6,14 +6,14 @@ export const FaqQuestions = (props) => {
 
     const {question1, answer1, question2, answer2} = props
     c(question1)
-    c(answer2)
+/*     c(answer2)
     c(question2)
-    c(answer2)
+    c(answer2) */
 
     const element = document.createElement("section")
     element.setAttribute("id","faqSection")
 
-    element.innerHTML = `
+    element.innerHTML += `
     <section>
         <h2>První část</h2>
         <div>
