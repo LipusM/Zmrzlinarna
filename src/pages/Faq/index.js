@@ -43,15 +43,32 @@ const section1A = sections1.map(section => section.answer)
 const section2Q = sections2.map(section => section.question)
 const section2A = sections2.map(section => section.answer)
 
+const allQA1 = [...sections1].map(section => ({
+    question: section.question,
+    answer: section.answer,
+  }));
+
+const allQA2 = [...sections2].map(section => ({
+    question: section.question,
+    answer: section.answer,
+}));
     const element = document.createElement("main")
 
-    element.append(FaqBanner(),
+/*     element.append(FaqBanner(),
         FaqQuestions({
             question1: section1Q,
             answer1: section1A,
             question2: section2Q,
             answer2: section2A,
-        }))
+        })
+        ) */
+
+        element.append(FaqBanner(),
+  FaqQuestions({
+    allQA1: allQA1,
+    allQA2: allQA2,
+  })
+);
 
     return element
 }
