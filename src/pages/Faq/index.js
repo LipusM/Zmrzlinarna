@@ -47,13 +47,13 @@ export const Faq = () => {
 
     element.append(
         FaqBanner(),
-        sections1.map(section =>
+        ...sections1.map(section =>
             FaqQuestions({
                 question1: section.question,
                 answer1: section.answer,
             })
         ),
-        sections2.map(section =>
+        ...sections2.map(section =>
             FaqQuestions({
                 question2: section.question,
                 answer2: section.answer,
