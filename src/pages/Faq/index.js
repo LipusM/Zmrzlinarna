@@ -17,7 +17,7 @@ export const Faq = () => {
 
     element.append(
         FaqBanner(),
-        FaqQuestions(),
+        FaqQuestions()
     )
 
     return element

@@ -35,7 +35,20 @@ export const FaqQuestions = () => {
     const element = document.createElement("section")
     element.setAttribute("id", "faqSection")
 
-    element.append(FaQ1(), FaQ2())
+    element.append(
+        ...sections1.map(section =>
+            FaQ1({
+                question: section.question,
+                answer: section.answer,
+            })
+        ),
+        ...sections2.map(section =>
+            FaQ2({
+                question: section.question,
+                answer: section.answer,
+            })
+        ),
+    )
 
     return element
 }

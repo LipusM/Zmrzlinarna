@@ -2,6 +2,8 @@ const c = console.log.bind(document)
 
 import "./style.scss"
 
+import { Header } from "./Header"
+
 export const FaQ2 = (props) => {
 
     const {question, answer} = props
@@ -9,9 +11,8 @@ export const FaQ2 = (props) => {
     const element = document.createElement("section")
     element.setAttribute("id", "faq2")
 
-    element.innerHTML = `
-    <h1>Dárkové poukazy</h1>
-
+    element.append(Header())
+    element.innerHTML += `
     <div class="accordion" id="accordionExample">
         <div class="accordion-item">
             <h2 class="accordion-header">
