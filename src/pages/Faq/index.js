@@ -2,12 +2,8 @@ const c = console.log.bind(document)
 
 import "./style.scss"
 
-import {
-    FaqBanner
-} from "./components/FaqBanner"
-import {
-    FaqQuestions
-} from "./components/FaqQuestions"
+import { FaqBanner} from "./components/FaqBanner"
+import { FaqQuestions} from "./components/FaqQuestions"
 
 export const Faq = () => {
 
@@ -37,38 +33,25 @@ export const Faq = () => {
                     answer: "Dárkové poukazy můžete uplatnit ve všech našich provozovnách.",
                 },
             ]
-        
-const section1Q = sections1.map(section => section.question)
-const section1A = sections1.map(section => section.answer)
-const section2Q = sections2.map(section => section.question)
-const section2A = sections2.map(section => section.answer)
+    
 
-const allQA1 = [...sections1].map(section => ({
-    question: section.question,
-    answer: section.answer,
-  }));
-
-const allQA2 = [...sections2].map(section => ({
-    question: section.question,
-    answer: section.answer,
-}));
     const element = document.createElement("main")
 
-    element.append(FaqBanner(),
+element.append(
+    FaqBanner(),
+    sections1.map(section => (
         FaqQuestions({
-            question1: sections1.map(section => section.question),
-            answer1: sections1.map(section => section.answer),
-            question2: sections2.map(section => section.question),
-            answer2: sections2.map(section => section.answer),
+            question1: section.question,
+            answer1: section.answer,
         })
-        )
-
-/*         element.append(FaqBanner(),
-  FaqQuestions({
-    allQA1: allQA1,
-    allQA2: allQA2,
-  })
-); */
+    )),
+    sections2.map(section => (
+        FaqQuestions({
+            question2: section.question,
+            answer2: section.answer,
+        })
+    )),
+)
 
     return element
 }
