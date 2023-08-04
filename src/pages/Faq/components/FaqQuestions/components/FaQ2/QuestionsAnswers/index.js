@@ -18,7 +18,7 @@ export const QuestionsAnswers = (props) => {
                     ${question}
                     </button>
                 </h2>
-                <div id="qa2${id}" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div id="qa2${id}" class="accordion-collapse collapse hide" aria-labelledby="headingOne">
                     <div class="accordion-body">
                     ${answer}
                     </div>
