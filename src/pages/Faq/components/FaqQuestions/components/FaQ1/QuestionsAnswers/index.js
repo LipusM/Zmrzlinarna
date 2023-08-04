@@ -7,6 +7,8 @@ export const QuestionsAnswers = (props) => {
     const {question, answer} = props
 
     const element = document.createElement("section")
+    element.classList.add("qa2")
+
     element.innerHTML += `
     <div class="accordion" id="accordionExample">
         <div class="accordion-item">
