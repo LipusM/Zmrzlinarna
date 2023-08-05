@@ -14,7 +14,7 @@ export const QuestionsAnswers = (props) => {
         <div class="accordion">
             <div class="accordion-item">
                 <h2 class="accordion-header">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#qa2${id}" aria-expanded="true" aria-controls="collapseOne">
+                    <button class="accordion-button accordion-background" style="background-color: #f6f6f6; color: #525252; box-shadow: none;" type="button" data-bs-toggle="collapse" data-bs-target="#qa2${id}" aria-expanded="true" aria-controls="collapseOne">
                     ${question}
                     </button>
                 </h2>
