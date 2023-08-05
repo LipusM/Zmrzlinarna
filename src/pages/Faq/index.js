@@ -4,6 +4,8 @@ import "./style.scss"
 
 import { FaqBanner } from "./components/FaqBanner"
 import { FaqQuestions } from "./components/FaqQuestions"
+import { Text } from "./components/Text"
+import { Form } from "./components/Form"
 
 export const Faq = () => {
 
@@ -11,7 +13,9 @@ export const Faq = () => {
 
     element.append(
         FaqBanner(),
-        FaqQuestions()
+        FaqQuestions(),
+        Text(),
+        Form()
     )
 
     return element
