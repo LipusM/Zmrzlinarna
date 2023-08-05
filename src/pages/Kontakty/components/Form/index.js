@@ -5,7 +5,6 @@ import "./style.scss"
 export const Form = () => {
 
     const element = document.createElement("form")
-    /* element.setAttribute("id", "contactsForm") */
 
     element.innerHTML = `
     <div id="thankYou" class="messageNoneC">
@@ -128,15 +127,10 @@ export const Form = () => {
     const theMessage = element.querySelector("#thankYou")
 
     const thankYouMessage = () => {
-
-        /* const theMessage = element.querySelector("#thankYou") */
         theMessage.classList.add("messageShown")
-
-        /* setTimeout(theMessage.classList.remove("messageShown"), 3000) */
     }
 
     //Skrytí děkovné zprávy
-   /*  const theMessage = element.querySelector("#thankYou") */
 
     const hideThankYouMessage = () => {
 
