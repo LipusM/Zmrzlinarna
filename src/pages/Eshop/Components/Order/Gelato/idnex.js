@@ -10,11 +10,11 @@ export const Gelato = (props) => {
     element.setAttribute("id","gelato")
 
     element.innerHTML = `
-    <div>
-        <div> <img src="${img}" alt="Gelato!"> </div>
-        <div>${text}</div>
-        <div><button type="button" class="btn btn-primary">Objednat</button></div>
-    </div>
+        <div class="myGelato">
+            <div> <img src="${img}" alt="Gelato!"> </div>
+            <div class="gelatoText">${text}</div>
+            <div><button type="button" class="btn btn-primary">Objednat</button></div>
+        </div>
     `
 
     return element
