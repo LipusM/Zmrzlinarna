@@ -11,7 +11,7 @@ export const Order = () => {
     element.setAttribute("id","order")
 
     element.innerHTML = `
-    <div class="mb-3 col-md-6">
+    <div class="mb-3>
         <label for="selectProduct" class="form-label">Vyberte si, co se vaše srdce přeje!</label>
         <select class="form-select" id="selectProduct" aria-label="Default select example">
             <option selected>Vše</option>
@@ -19,6 +19,8 @@ export const Order = () => {
             <option value="2">Zmrzlina</option>
         </select>
     </div>
+
+    <div id="chosenProducts"></div>
     `
 
     return element
