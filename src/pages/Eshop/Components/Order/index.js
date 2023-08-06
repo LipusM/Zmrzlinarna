@@ -21,43 +21,43 @@ export const Order = () => {
     const element = document.createElement("section")
     element.setAttribute("id","order")
 
-    const iceCream = [{
+    const iceCreams = [{
         img: iceCream1,
-        text: "Ano, večírek, meeting, workshop či oslavu je možné uspořádat ve všech našich provozovnách. Kontaktujte nás a my to rádi pro vás zajistíme.",
+        text: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris metus. Aliquam erat volutpat. Neque porro.",
     },
     {
         img: iceCream2,
-        text: "Speciální narozeninové dorty s popisem na přání zatím nevyrábíme, je možné si u nás zakoupit celý dort z nabídky našich dortů. Je ale třeba objednávka alespoň 3 dny předem.",
+        text: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris metus. Aliquam erat volutpat. Neque porro.",
     },
     {
         img: iceCream3,
-        text: "Všechny druhy zmrzliny včetně zdravých a veganských prodáváme maloobchodně vždy za stejnou cenu jen dle velikosti porce. Tak to bylo, je a tak to zůstane.",
+        text: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris metus. Aliquam erat volutpat. Neque porro.",
     },
     {
         img: iceCream4,
-        text: "Všechny druhy zmrzliny včetně zdravých a veganských prodáváme maloobchodně vždy za stejnou cenu jen dle velikosti porce. Tak to bylo, je a tak to zůstane.",
+        text: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris metus. Aliquam erat volutpat. Neque porro.",
     },
     ]
 
-    const gelato = [{
+    const gelatos = [{
         img: gelato1,
-        text: "Ano, večírek, meeting, workshop či oslavu je možné uspořádat ve všech našich provozovnách. Kontaktujte nás a my to rádi pro vás zajistíme.",
+        text: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris metus. Aliquam erat volutpat. Neque porro.",
     },
     {
         img: gelato2,
-        answer: "Speciální narozeninové dorty s popisem na přání zatím nevyrábíme, je možné si u nás zakoupit celý dort z nabídky našich dortů. Je ale třeba objednávka alespoň 3 dny předem.",
+        answer: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris metus. Aliquam erat volutpat. Neque porro.",
     },
     {
         img: gelato3,
-        text: "Všechny druhy zmrzliny včetně zdravých a veganských prodáváme maloobchodně vždy za stejnou cenu jen dle velikosti porce. Tak to bylo, je a tak to zůstane.",
+        text: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris metus. Aliquam erat volutpat. Neque porro.",
     },
     {
         img: gelato4,
-        answer: "Speciální narozeninové dorty s popisem na přání zatím nevyrábíme, je možné si u nás zakoupit celý dort z nabídky našich dortů. Je ale třeba objednávka alespoň 3 dny předem.",
+        answer: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris metus. Aliquam erat volutpat. Neque porro.",
     },
     {
         img: gelato5,
-        text: "Všechny druhy zmrzliny včetně zdravých a veganských prodáváme maloobchodně vždy za stejnou cenu jen dle velikosti porce. Tak to bylo, je a tak to zůstane.",
+        text: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris metus. Aliquam erat volutpat. Neque porro.",
     },
     ]
 
@@ -76,10 +76,19 @@ export const Order = () => {
     `
 
     const selectProduct = element.querySelector("#selectProduct")
+    const chosenProcuts = element.querySelector("#chosenProducts")
+
+    chosenProcuts.append(
+        ...gelatos.map(gelato => 
+            Gelato({
+                img: gelato.img,
+                text: gelato.text,
+            }))
+        )
     
-    selectProduct.addEventListener("click", () => {
+/*     selectProduct.addEventListener("click", () => {
         c(selectProduct.value)
-    })
+    }) */
 
     return element
 }
