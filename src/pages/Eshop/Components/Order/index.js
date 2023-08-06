@@ -14,7 +14,7 @@ export const Order = () => {
     <div class="mb-3 col-md-6">
         <label for="knowUs" class="form-label">Výrobek k objednání: *</label>
         <select class="form-select" id="knowUs" aria-label="Default select example">
-            <option selected>Vše</option>
+            <option selected>-- Vše --</option>
             <option value="1">Gelato</option>
             <option value="2">Zmrzlina</option>
         </select>
