@@ -1,4 +1,12 @@
-#eshopSection{
+#eshopPart{
+    
     width: 50%;
     margin: auto;
+}
+
+@media (max-width: 900px){
+
+    #eshopPart{
+        width: 90%;
+    }
 }
