@@ -65,7 +65,7 @@ export const Order = () => {
     <div class="mb-3>
         <label for="selectProduct" class="form-label">Vyberte si, co se vaše srdce přeje!</label>
         <select class="form-select" id="selectProduct" aria-label="Default select example">
-            <option selected>Vyberte mlsání!</option>
+            <option value="0" selected>Vyberte mlsání!</option>
             <option value="1">Všechno!</option>
             <option value="2">Gelato</option>
             <option value="3">Zmrzlina</option>
@@ -77,18 +77,42 @@ export const Order = () => {
 
     const selectProduct = element.querySelector("#selectProduct")
     const chosenProcuts = element.querySelector("#chosenProducts")
-
-/*     chosenProcuts.append(
-        ...gelatos.map(gelato => 
-            Gelato({
-                img: gelato.img,
-                text: gelato.text,
-            }))
-        ) */
     
     selectProduct.addEventListener("click", () => {
 
-        if(selectProduct.value === "2"){
+        if(selectProduct.value === "0"){
+            chosenProcuts.innerHTML = ``
+
+            chosenProcuts.append(
+                ...gelatos.map(gelato => 
+                    Gelato({
+                        img: gelato.img,
+                        text: gelato.text,
+                    })),
+                    ...iceCreams.map(iceCream => 
+                        IceCream({
+                            img: iceCream.img,
+                            text: iceCream.text,
+                        }))
+                )
+        }
+        else if(selectProduct.value === "1"){
+            chosenProcuts.innerHTML = ``
+
+            chosenProcuts.append(
+                ...gelatos.map(gelato => 
+                    Gelato({
+                        img: gelato.img,
+                        text: gelato.text,
+                    })),
+                    ...iceCreams.map(iceCream => 
+                        IceCream({
+                            img: iceCream.img,
+                            text: iceCream.text,
+                        }))
+                )
+        }
+        else if(selectProduct.value === "2"){
             chosenProcuts.innerHTML = ``
 
             chosenProcuts.append(
