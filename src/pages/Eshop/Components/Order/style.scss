@@ -25,11 +25,10 @@ $secondaryColor: #4a4a4a;
         display: flex;
         justify-content: space-evenly;
         flex-wrap: wrap;
-
     }
 
-    .displayHeader{
-        display: block;
+    #gelatoHeader, #iceCreamHeader{
+        color: $primaryColor;
     }
 
     .hideHeader{

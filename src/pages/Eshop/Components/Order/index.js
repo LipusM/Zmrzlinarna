@@ -91,7 +91,10 @@ export const Order = () => {
 
         if(selectProduct.value === "0"){
             chosenGelato.innerHTML = ``
+            gelatoHeader.classList.remove("hideHeader")
+
             chosenIceCream.innerHTML = ``
+            iceCreamHeader.classList.remove("hideHeader")
 
             chosenGelato.append(
                 ...gelatos.map(gelato => 
@@ -110,7 +113,10 @@ export const Order = () => {
         }
         else if(selectProduct.value === "1"){
             chosenGelato.innerHTML = ``
+            gelatoHeader.classList.remove("hideHeader")
+
             chosenIceCream.innerHTML = ``
+            iceCreamHeader.classList.add("hideHeader")
 
             chosenGelato.append(
                 ...gelatos.map(gelato => 
@@ -122,7 +128,10 @@ export const Order = () => {
         }
         else if(selectProduct.value === "2"){
             chosenGelato.innerHTML = ``
+            gelatoHeader.classList.add("hideHeader")
+
             chosenIceCream.innerHTML = ``
+            iceCreamHeader.classList.remove("hideHeader")
 
             chosenIceCream.append(
                 ...iceCreams.map(iceCream => 
