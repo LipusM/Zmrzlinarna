@@ -67,9 +67,9 @@ export const Order = () => {
     <div class="mb-3>
         <label for="selectProduct" class="form-label">Vyberte si, co se vaše srdce přeje!</label>
         <select class="form-select" id="selectProduct" aria-label="Default select example">
-            <option value="0" selected>Vyberte mlsání!</option>
-            <option value="1">Gelato</option>
-            <option value="2">Zmrzlina</option>
+            <option value="1">Vyberte mlsání!</option>
+            <option value="2">Gelato</option>
+            <option value="3">Zmrzlina</option>
         </select>
     </div>
 
@@ -86,6 +86,21 @@ export const Order = () => {
 
     const gelatoHeader = element.querySelector("#gelatoHeader")
     const iceCreamHeader = element.querySelector("#iceCreamHeader")
+
+    chosenGelato.append(
+        ...gelatos.map(gelato => 
+            Gelato({
+                img: gelato.img,
+                text: gelato.text,
+            }))
+        )
+    chosenIceCream.append(
+        ...iceCreams.map(iceCream => 
+            IceCream({
+                img: iceCream.img,
+                text: iceCream.text,
+            }))
+    )
     
     selectProduct.addEventListener("click", () => {
 
