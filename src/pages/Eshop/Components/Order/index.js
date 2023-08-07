@@ -45,7 +45,7 @@ export const Order = () => {
     },
     {
         img: gelato2,
-        answer: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris metus. Aliquam erat volutpat. Neque porro.",
+        answer: "Lorem ipsum dolor sit amet, consectfetuer adipiscing elit. Mauris metus. Aliquam erat volutpat. Neque porro.",
     },
     {
         img: gelato3,
