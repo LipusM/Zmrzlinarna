@@ -17,5 +17,16 @@ export const Gelato = (props) => {
         </div>
     `
 
+    const orderButton = element.querySelector("button")
+
+    orderButton.addEventListener("click", () => {
+        
+        if(orderButton.textContent === "Objednat"){
+            orderButton.textContent = "Objednáno"
+        } else {
+            orderButton.textContent = "Objednat"
+        }
+    })
+
     return element
 }
