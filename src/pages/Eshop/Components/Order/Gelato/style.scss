@@ -1,7 +1,14 @@
-#gelato {
-    width: 100%;
+$primaryColor: #691103;
+$secondaryColor: #4a4a4a;
+
+.gelato {
+    border: solid 1px orange;
+    width: max-content;
 
     display: flex;
+
+    min-height: 420px;
+    max-width: 250px;
 
     .myGelato {
         margin-bottom: 20px;
@@ -12,7 +19,16 @@
         }
 
         .gelatoText{
-            width: 250px;
+            width: 100%;
+
+            text-align: justify;
+            padding: 10px;
+        }
+
+        button{
+            background-color: white;
+            color: $primaryColor;
+            border: solid 1px $primaryColor;
         }
     }
 
