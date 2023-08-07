@@ -14,4 +14,20 @@ $secondaryColor: #4a4a4a;
 
         width: 50%;
     }
+
+    #chosenProducts{
+        max-width: 100%;
+
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        
+    }
+}
+
+@media (max-width: 900px){
+
+    #selectProduct{
+        margin: auto;
+    }
 }
