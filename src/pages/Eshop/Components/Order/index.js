@@ -78,17 +78,40 @@ export const Order = () => {
     const selectProduct = element.querySelector("#selectProduct")
     const chosenProcuts = element.querySelector("#chosenProducts")
 
-    chosenProcuts.append(
+/*     chosenProcuts.append(
         ...gelatos.map(gelato => 
             Gelato({
                 img: gelato.img,
                 text: gelato.text,
             }))
-        )
+        ) */
     
-/*     selectProduct.addEventListener("click", () => {
-        c(selectProduct.value)
-    }) */
+    selectProduct.addEventListener("click", () => {
+
+        if(selectProduct.value === "2"){
+            chosenProcuts.innerHTML = ``
+
+            chosenProcuts.append(
+                ...gelatos.map(gelato => 
+                    Gelato({
+                        img: gelato.img,
+                        text: gelato.text,
+                    }))
+                )
+        }
+        else if(selectProduct.value === "3"){
+            chosenProcuts.innerHTML = ``
+
+            chosenProcuts.append(
+                ...iceCreams.map(iceCream => 
+                    IceCream({
+                        img: iceCream.img,
+                        text: iceCream.text,
+                    }))
+                )
+        }
+
+    })
 
     return element
 }
