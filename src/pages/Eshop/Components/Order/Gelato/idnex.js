@@ -13,7 +13,7 @@ export const Gelato = (props) => {
         <div class="myGelato">
             <div> <img src="${img}" alt="Gelato!"> </div>
             <div class="gelatoText">${text}</div>
-            <div><button type="button" class="btn btn-primary">Objednat</button></div>
+            <div class="orderButton"><button type="button" class="btn btn-primary">Objednat</button></div>
         </div>
     `
 
