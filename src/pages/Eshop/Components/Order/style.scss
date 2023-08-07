@@ -19,13 +19,21 @@ $secondaryColor: #4a4a4a;
         border: solid 1px $primaryColor;
     }
 
-    #chosenProducts {
+    #chosenGelato, #chosenIceCream {
         max-width: 100%;
 
         display: flex;
         justify-content: space-evenly;
         flex-wrap: wrap;
 
+    }
+
+    .displayHeader{
+        display: block;
+    }
+
+    .hideHeader{
+        display: none;
     }
 }
 

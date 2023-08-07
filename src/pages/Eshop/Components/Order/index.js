@@ -3,9 +3,9 @@ const c = console.log.bind(document)
 import "./style.scss"
 
 import { Gelato } from "../Gelato/idnex"
-import { GelatoHeader } from "../GelatoHeader/index"
+/* import { GelatoHeader } from "../GelatoHeader/index" */
 import { IceCream } from "../IceCream/index"
-import { IceCreamHeader } from "../IceCreamHeader/index"
+/* import { IceCreamHeader } from "../IceCreamHeader/index" */
 
 import gelato1 from "../img/gelato/gelato1.jpg"
 import gelato2 from "../img/gelato/gelato2.jpg"
@@ -68,74 +68,69 @@ export const Order = () => {
         <label for="selectProduct" class="form-label">Vyberte si, co se vaše srdce přeje!</label>
         <select class="form-select" id="selectProduct" aria-label="Default select example">
             <option value="0" selected>Vyberte mlsání!</option>
-            <option value="1">Všechno!</option>
-            <option value="2">Gelato</option>
-            <option value="3">Zmrzlina</option>
+            <option value="1">Gelato</option>
+            <option value="2">Zmrzlina</option>
         </select>
     </div>
 
-    <h2>Gelato</h2>
-    <div id="chosenProducts"></div>
+    <h2 id="gelatoHeader">Gelato</h2>
+    <div id="chosenGelato"></div>
+
+    <h2 id="iceCreamHeader">IceCream</h2>
+    <div id="chosenIceCream"></div>
     `
 
     const selectProduct = element.querySelector("#selectProduct")
-    const chosenProcuts = element.querySelector("#chosenProducts")
+    const chosenGelato = element.querySelector("#chosenGelato")
+    const chosenIceCream = element.querySelector("#chosenIceCream")
+
+    const gelatoHeader = element.querySelector("#gelatoHeader")
+    const iceCreamHeader = element.querySelector("#iceCreamHeader")
     
     selectProduct.addEventListener("click", () => {
 
         if(selectProduct.value === "0"){
-            chosenProcuts.innerHTML = ``
+            chosenGelato.innerHTML = ``
+            chosenIceCream.innerHTML = ``
 
-            chosenProcuts.append(
-                ...gelatos.map(gelato => 
-                    Gelato({
-                        img: gelato.img,
-                        text: gelato.text,
-                    })),
-                    ...iceCreams.map(iceCream => 
-                        IceCream({
-                            img: iceCream.img,
-                            text: iceCream.text,
-                        }))
-                )
-        }
-        else if(selectProduct.value === "1"){
-            chosenProcuts.innerHTML = ``
-
-            chosenProcuts.append(
-                ...gelatos.map(gelato => 
-                    Gelato({
-                        img: gelato.img,
-                        text: gelato.text,
-                    })),
-                    ...iceCreams.map(iceCream => 
-                        IceCream({
-                            img: iceCream.img,
-                            text: iceCream.text,
-                        }))
-                )
-        }
-        else if(selectProduct.value === "2"){
-            chosenProcuts.innerHTML = ``
-
-            chosenProcuts.append(
+            chosenGelato.append(
                 ...gelatos.map(gelato => 
                     Gelato({
                         img: gelato.img,
                         text: gelato.text,
                     }))
                 )
-        }
-        else if(selectProduct.value === "3"){
-            chosenProcuts.innerHTML = ``
-
-            chosenProcuts.append(
+            chosenIceCream.append(
                 ...iceCreams.map(iceCream => 
                     IceCream({
                         img: iceCream.img,
                         text: iceCream.text,
                     }))
+            )
+        }
+        else if(selectProduct.value === "1"){
+            chosenGelato.innerHTML = ``
+            chosenIceCream.innerHTML = ``
+
+            chosenGelato.append(
+                ...gelatos.map(gelato => 
+                    Gelato({
+                        img: gelato.img,
+                        text: gelato.text,
+                    }))
                 )
+        }
+        else if(selectProduct.value === "2"){
+            chosenGelato.innerHTML = ``
+            chosenIceCream.innerHTML = ``
+
+            chosenIceCream.append(
+                ...iceCreams.map(iceCream => 
+                    IceCream({
+                        img: iceCream.img,
+                        text: iceCream.text,
+                    }))
+            )   
         }
 
     })
