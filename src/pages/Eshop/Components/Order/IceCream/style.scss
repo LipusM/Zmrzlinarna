@@ -1,0 +1,54 @@
+$primaryColor: #691103;
+$secondaryColor: #4a4a4a;
+
+.iceCream {
+    width: max-content;
+
+    display: flex;
+
+    min-height: 420px;
+    max-width: 250px;
+
+    margin-bottom: 10px;
+
+    position: relative;
+
+    .myIceCream {
+        margin-bottom: 20px;
+
+        img {
+            width: 250px;
+            height: 250px;
+        }
+
+        .iceCreamText {
+            width: 100%;
+
+            text-align: justify;
+            padding: 10px;
+        }
+
+        .orderButton {
+            display: flex;
+            justify-content: center;
+
+            button {
+                background-color: white;
+                color: $primaryColor;
+                border: solid 1px $primaryColor;
+
+                position: absolute;
+                bottom: 2%;
+                transition: ease-in-out 500ms;
+
+                box-shadow: none;
+
+                &:hover {
+                    color: white;
+                    background-color: $primaryColor;
+                }
+            }
+        }
+    }
+
+}
