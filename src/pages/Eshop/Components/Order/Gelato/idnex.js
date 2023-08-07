@@ -7,7 +7,7 @@ export const Gelato = (props) => {
     const {img, text} = props
 
     const element = document.createElement("section")
-    element.setAttribute("id","gelato")
+    element.setAttribute("class","gelato")
 
     element.innerHTML = `
         <div class="myGelato">
