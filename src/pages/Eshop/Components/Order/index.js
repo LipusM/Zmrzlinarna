@@ -2,19 +2,21 @@ const c = console.log.bind(document)
 
 import "./style.scss"
 
-import { Gelato } from "./Gelato/idnex"
-import { IceCream } from "./IceCream/index"
+import { Gelato } from "../Gelato/idnex"
+import { GelatoHeader } from "../GelatoHeader/index"
+import { IceCream } from "../IceCream/index"
+import { IceCreamHeader } from "../IceCreamHeader/index"
 
-import gelato1 from "./img/gelato/gelato1.jpg"
-import gelato2 from "./img/gelato/gelato2.jpg"
-import gelato3 from "./img/gelato/gelato3.jpg"
-import gelato4 from "./img/gelato/gelato4.jpg"
-import gelato5 from "./img/gelato/gelato5.jpg"
+import gelato1 from "../img/gelato/gelato1.jpg"
+import gelato2 from "../img/gelato/gelato2.jpg"
+import gelato3 from "../img/gelato/gelato3.jpg"
+import gelato4 from "../img/gelato/gelato4.jpg"
+import gelato5 from "../img/gelato/gelato5.jpg"
 
-import iceCream1 from "./img/iceCream/iceCream1.jpg"
-import iceCream2 from "./img/iceCream/iceCream2.jpg"
-import iceCream3 from "./img/iceCream/iceCream3.jpg"
-import iceCream4 from "./img/iceCream/iceCream4.jpg"
+import iceCream1 from "../img/iceCream/iceCream1.jpg"
+import iceCream2 from "../img/iceCream/iceCream2.jpg"
+import iceCream3 from "../img/iceCream/iceCream3.jpg"
+import iceCream4 from "../img/iceCream/iceCream4.jpg"
 
 export const Order = () => {
 
@@ -72,6 +74,7 @@ export const Order = () => {
         </select>
     </div>
 
+    <h2>Gelato</h2>
     <div id="chosenProducts"></div>
     `
 
