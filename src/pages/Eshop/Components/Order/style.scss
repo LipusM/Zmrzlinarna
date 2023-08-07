@@ -1,7 +1,7 @@
 $primaryColor: #691103;
 $secondaryColor: #4a4a4a;
 
-#order{
+#order {
     font-family: 'museo-sans', sans-serif;
     text-align: center;
 
@@ -9,25 +9,26 @@ $secondaryColor: #4a4a4a;
     margin: 20px auto;
 
 
-    #selectProduct{
+    #selectProduct {
         margin-bottom: 20px;
 
-        width: 50%;
+        max-width: fit-content;
+        padding-right: 50px;
     }
 
-    #chosenProducts{
+    #chosenProducts {
         max-width: 100%;
 
         display: flex;
         justify-content: space-evenly;
         flex-wrap: wrap;
-        
+
     }
 }
 
-@media (max-width: 900px){
+@media (max-width: 900px) {
 
-    #selectProduct{
+    #selectProduct {
         margin: auto;
     }
 }
