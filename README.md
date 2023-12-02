@@ -13,9 +13,9 @@ Krátký popis projektu.
 ## Část 1
 
 <details>
-  <summary><b>Zobrazit obsah</b></summary>
+  <summary><b>Zobrazit obsah pro Část 1</b></summary>
 
-  Text pro Část 1, aktivní tab.
+  Text pro Část 1.
 
 </details>
 
@@ -24,9 +24,9 @@ Krátký popis projektu.
 ## Část 2
 
 <details>
-  <summary><b>Zobrazit obsah</b></summary>
+  <summary><b>Zobrazit obsah pro Část 2</b></summary>
 
-  Text pro Část 2, aktivní tab.
+  Text pro Část 2.
 
 </details>
 
@@ -35,8 +35,8 @@ Krátký popis projektu.
 ## Část 3
 
 <details>
-  <summary><b>Zobrazit obsah</b></summary>
+  <summary><b>Zobrazit obsah pro Část 3</b></summary>
 
-  Text pro Část 3, aktivní tab.
+  Text pro Část 3.
 
 </details>
