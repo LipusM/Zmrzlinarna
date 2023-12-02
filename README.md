@@ -1,7 +1,7 @@
 ## Zmrzlinárna
 
 <details>
-  <summary><b>Zobrazit obsah pro Část 1</b></summary>
+  <summary><b>Detail</b></summary>
 
   Text pro Část 1.
 
@@ -10,7 +10,7 @@
 ## Ice-cream shop
 
 <details>
-  <summary><b>Zobrazit obsah pro Část 2</b></summary>
+  <summary><b>Detail</b></summary>
 
   Text pro Část 2.
 
