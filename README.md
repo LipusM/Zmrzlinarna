@@ -1,4 +1,4 @@
-## Zmrzlinárna
+## Zmrzlinárna (CZ)
 
 <details>
   <summary><b>Detail</b></summary>
@@ -14,7 +14,7 @@
 
 </details>
 
-## Ice-cream shop
+## Ice-cream shop (EN)
 
 <details>
   <summary><b>Detail</b></summary>
