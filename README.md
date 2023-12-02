@@ -1,11 +1,4 @@
-# Zmrzlinárna / Ice-cream shop
-
-Krátký popis projektu.
-
-
----
-
-## CZ
+## Zmrzlinárna
 
 <details>
   <summary><b>Zobrazit obsah pro Část 1</b></summary>
@@ -14,7 +7,7 @@ Krátký popis projektu.
 
 </details>
 
-## AJ
+## Ice-cream shop
 
 <details>
   <summary><b>Zobrazit obsah pro Část 2</b></summary>
