@@ -19,8 +19,6 @@ Krátký popis projektu.
 
 </details>
 
----
-
 ## Část 2
 
 <details>
@@ -29,8 +27,6 @@ Krátký popis projektu.
   Text pro Část 2.
 
 </details>
-
----
 
 ## Část 3
 
