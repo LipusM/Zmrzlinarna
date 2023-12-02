@@ -2,8 +2,9 @@
 
 <details>
   <summary><b>Detail</b></summary>
+  **DŮLEŽITÉ: Nejedná se o žádnou spolupráci ani nic podobného!**
 
-  Toto je soukromý projekt webové stránky pro virtuální zmrzlinárnu, postavený na balíčku Webpack pro správu balíčků a spouštění projektu. 
+  Toto je soukromý projekt webové stránky, postavený na balíčku Webpack pro správu balíčků a spouštění projektu. 
   
   Pro spuštění projektu stačí v terminálu zadat příkaz:
   **npm run start**
@@ -17,7 +18,9 @@
 <details>
   <summary><b>Detail</b></summary>
 
-  This is a private website project for a virtual ice cream parlor, built on the Webpack package for package management and project launching. 
+  **IMPORTANT: This is not a collaboration or anything like that!**
+
+  This is a private website project, built on the Webpack package for package management and project launching. 
   
   To start the project, just type the following command in the terminal:
   **npm run start**
