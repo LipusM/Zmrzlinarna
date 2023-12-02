@@ -4,45 +4,39 @@ Krátký popis projektu.
 
 ## Obsah
 
-- [Tab 1](#tab-1)
-- [Tab 2](#tab-2)
-- [Tab 3](#tab-3)
+- [Část 1](#část-1)
+- [Část 2](#část-2)
+- [Část 3](#část-3)
 
 ---
 
-## Tab 1
-
-**Nadpis pro Tab 1**
+## Část 1
 
 <details>
-  <summary>Zobrazit obsah</summary>
+  <summary><b>Zobrazit obsah</b></summary>
 
-  Text pro Tab 1.
+  Text pro Část 1, aktivní tab.
 
 </details>
 
 ---
 
-## Tab 2
-
-**Nadpis pro Tab 2**
+## Část 2
 
 <details>
-  <summary>Zobrazit obsah</summary>
+  <summary><b>Zobrazit obsah</b></summary>
 
-  Text pro Tab 2.
+  Text pro Část 2, aktivní tab.
 
 </details>
 
 ---
 
-## Tab 3
-
-**Nadpis pro Tab 3**
+## Část 3
 
 <details>
-  <summary>Zobrazit obsah</summary>
+  <summary><b>Zobrazit obsah</b></summary>
 
-  Text pro Tab 3.
+  Text pro Část 3, aktivní tab.
 
 </details>
