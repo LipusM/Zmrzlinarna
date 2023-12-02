@@ -2,6 +2,7 @@
 
 <details>
   <summary><b>Detail</b></summary>
+
   **DŮLEŽITÉ: Nejedná se o žádnou spolupráci ani nic podobného!**
 
   Toto je soukromý projekt webové stránky, postavený na balíčku Webpack pro správu balíčků a spouštění projektu. 
